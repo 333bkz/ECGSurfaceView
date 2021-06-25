@@ -18,7 +18,7 @@ import java.util.List;
 public class ECGSurfaceView extends SurfaceView implements SurfaceHolder.Callback, Runnable {
     private final SurfaceHolder holder;//控制器
     private Paint paint;
-    private boolean isDrawing;
+    private volatile boolean isDrawing;
     private int width, height;
     private int screenNumber;//满屏所需点
     private final int offset = 5;//点之间间隔
